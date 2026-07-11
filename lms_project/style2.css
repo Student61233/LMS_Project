@@ -1,0 +1,127 @@
+/* ================= SPLIT AUTH PAGE ================= */
+
+.auth-wrapper {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* LEFT SIDE */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.auth-left h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.auth-left p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+    flex: 1;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box {
+    width: 380px;
+    animation: fadeSlide 0.6s ease-in-out;
+}
+
+.auth-box h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Floating Inputs */
+.form-group {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #6b7280;
+    font-size: 13px;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label {
+    top: -8px;
+    font-size: 11px;
+    color: #4f46e5;
+}
+
+/* Button */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Toggle Password */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .auth-wrapper {
+        flex-direction: column;
+    }
+
+    .auth-left {
+        display: none;
+    }
+}
